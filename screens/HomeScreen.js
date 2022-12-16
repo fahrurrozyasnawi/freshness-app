@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   info: {
     alignSelf: 'flex-end',
     top: 0,
-    marginTop: 40,
+    marginTop: 16,
     right: 10,
     position: 'absolute'
   },
