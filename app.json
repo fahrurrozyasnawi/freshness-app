@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.freshnessapp"
+      "package": "com.poltekkesmks.fisqids"
     },
     "web": {
       "favicon": "./assets/favicon.png"
