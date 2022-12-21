@@ -14,14 +14,15 @@ import {
   ActivityIndicator,
 } from 'react-native-paper'
 import axios from 'axios'
+import StaticVar from '../config/StaticVar'
 
-const URL_API = 'http://192.168.1.14:5000'
+const url = StaticVar.URL_API
 const apiKey = 'test12345'
 const headers = {
   'Content-Type': 'multipart/form-data',
   'Accept': '*',
   'Access-Control-Allow-Origin': '*',
-  Authorization: apiKey
+  // Authorization: apiKey
 }
 
 const DetectScreen = (props) => {
@@ -47,7 +48,7 @@ const DetectScreen = (props) => {
       )
     } else {
       setIsLoading(true)
-      await axios.post(URL_API + '/results', newData, {
+      await axios.post(url + '/results', newData, {
         headers: headers
       })
         .then(res => {
@@ -75,7 +76,7 @@ const DetectScreen = (props) => {
       name: fileName,
       type: `image/${fileType}`
     }
-    formData.append('file', data);
+    formData.append('image_link', data);
 
     return formData;
   }
